@@ -55,7 +55,7 @@ class TaskController extends Controller
         if ($request->ajax()) 
         {         
             $validator = Validator::make($request->all(), [
-                'image_file' => 'mimetypes:image/jpeg,image/png,image/jpg|max:8192',
+                'image_file' => 'image|max:16384',
             ]);
 
             if($validator->fails()) {
